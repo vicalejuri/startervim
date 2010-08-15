@@ -96,6 +96,11 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+"
+" Grep
+"
+set grepprg=ack
+set grepformat=%f:%l:%m
 
 
 " GUI Options
@@ -147,6 +152,10 @@ let delimitMate_visual_leader = ""
 " SuperTab
 " --- BUNDLE: http://github.com/ervandew/supertab.git
 let g:SuperTabCrMapping = 0
+
+"
+" VimShell
+" --- BUNDLE: http://github.com/Shougo/vimshell.git
 
 "
 " Your own key-maps. 
