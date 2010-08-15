@@ -1,0 +1,34 @@
+let mapleader = ","
+
+"
+" Fixing some vim defaults
+"
+
+" Indent using tabs (while in visual mode) 
+vnoremap <tab>       >gv
+vnoremap <s-tab>     <gv
+vnoremap <           <gv
+vnoremap >           >gv
+
+" Search only in the selected block (visual mode)
+vnoremap / <esc>/\%V
+
+" Scroll using C-j and C-k (instead of C-e and C-y)
+nnoremap <C-j> 5<C-e>
+nnoremap <C-k> 5<C-y>
+
+" Toggle line-numbering
+nn <leader>n <esc>:set number! number?<cr>
+
+" Nerd Tree
+nmap <leader>o :NERDTreeToggle<cr>
+nmap <leader>O :NERDTreeFind<cr>
+
+" Lusty explorer
+nmap <leader>t :LustyFilesystemExplorer<cr>
+nmap <leader>e :LustyBufferExplorer<cr>
+nmap <leader><leader> :LustyJuggler<cr>
+
+" Omni autocomplete
+
+
