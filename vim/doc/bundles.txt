@@ -1,7 +1,7 @@
 *bundles.txt*                    Bundles                      Version 0.1
 
 These are the bundles installed on your system, along with their
-versions and release dates.  Downloaded on Sun Aug 15 15:21:08 -0700 2010.
+versions and release dates.  Downloaded on Sun Aug 22 17:08:16 -0700 2010.
 
 A version number of 'n/a' means upstream hasn't tagged any releases.
   - |syntastic|                    1.1.0-43-ge45183a      2010-08-13
@@ -11,4 +11,5 @@ A version number of 'n/a' means upstream hasn't tagged any releases.
   - |snipmate|                     n/a                    2010-04-08
   - |supertab|                     n/a                    2010-06-24
   - |vimshell|                     ver.7.1-3-ge6bfb45     2010-08-15
+  - |matchit|                      n/a                    2010-04-28
 

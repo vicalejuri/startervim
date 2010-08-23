@@ -125,6 +125,12 @@ endif
 " Enable vim-bundles
 call pathogen#runtime_append_all_bundles()
 
+" Helper command to update bundles
+function! s:UpdateBundles()
+    exec '!ruby ~/.vim/bin/vim-update-bundles.rb'
+endfunction
+command! -nargs=? UpdateBundles call s:UpdateBundles()
+
 " Syntastic 
 " --- BUNDLE: http://github.com/scrooloose/syntastic.git
 let g:syntastic_enable_signs=1
@@ -156,6 +162,10 @@ let g:SuperTabCrMapping = 0
 "
 " VimShell
 " --- BUNDLE: http://github.com/Shougo/vimshell.git
+
+"
+" Matchit
+" --- BUNDLE: http://github.com/edsono/vim-matchit.git
 
 "
 " Your own key-maps. 
