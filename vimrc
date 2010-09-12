@@ -168,6 +168,15 @@ let g:SuperTabCrMapping = 0
 " --- BUNDLE: http://github.com/edsono/vim-matchit.git
 
 "
+" vim-align 
+" --- BUNDLE: http://github.com/tsaleh/vim-align.git
+
+"
 " Your own key-maps. 
 " 
 source ~/.vimrc-keymaps
+
+"
+" Filetypes
+"
+autocmd BufRead *.json set filetype=json
