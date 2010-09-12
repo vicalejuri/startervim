@@ -6,15 +6,15 @@ approach is used, including pathogen and automatic update of plugins (aka as bun
 
 The included bundles at the moment are:
 
-* `syntastic` (http://github.com/scrooloose/syntastic)
-* `nerdtree` (http://github.com/scrooloose/nerdtree)
-* `lusty` (http://github.com/sjbach/lusty)
-* `delimitMate` (http://github.com/Raimondi/delimitMate)
-* `snipMate` (http://github.com/msanders/snipmate.vim)
-* `supertab` (http://github.com/ervandew/supertab)
-* `vimshell` (http://github.com/Shougo/vimshell)
-* `matchit` (http://github.com/edsono/vim-matchit)
-* `align` (http://github.com/tsaleh/vim-align)
+* [syntastic](http://github.com/scrooloose/syntastic)
+* [nerdtree](http://github.com/scrooloose/nerdtree)
+* [lusty](http://github.com/sjbach/lusty)
+* [delimitMate](http://github.com/Raimondi/delimitMate)
+* [snipMate](http://github.com/msanders/snipmate.vim)
+* [supertab](http://github.com/ervandew/supertab)
+* [vimshell](http://github.com/Shougo/vimshell)
+* [matchit](http://github.com/edsono/vim-matchit)
+* [align](http://github.com/tsaleh/vim-align)
 
 Installation
 ------------
@@ -72,4 +72,4 @@ Kudos
 -----
 
 * [tpope](http://github.com/tpope/vim-pathogen) for cleaning the mess with vim plugins (pathogen)
-* [bronsom] (http://github.com/bronson/) to his incredible work on `vim-update-bundles` and `vim-scripts` mirror.
+* [bronsom](http://github.com/bronson/) to his incredible work on `vim-update-bundles` and `vim-scripts` mirror.
