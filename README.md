@@ -71,5 +71,5 @@ Just run `:UpdateBundles` inside vim.
 Kudos
 -----
 
-    * [tpope](http://github.com/tpope/vim-pathogen) for cleaning the mess with vim plugins (pathogen)
-    * [bronsom] (http://github.com/bronson/) to his incredible work on `vim-update-bundles` and `vim-scripts` mirror.
+* [tpope](http://github.com/tpope/vim-pathogen) for cleaning the mess with vim plugins (pathogen)
+* [bronsom] (http://github.com/bronson/) to his incredible work on `vim-update-bundles` and `vim-scripts` mirror.
