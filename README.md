@@ -25,7 +25,7 @@ It's fine to have a vim without ruby support.
 Installation is performed by user, and not system-wide. Your old `.vim/` and `.vimrc` files are saved
 as `~/.$file-name.%date%.bak` . To install, simple issue this commands:
 
-    $ git@github.com:Frangossauro/startervim.git
+    $ git clone git@github.com:Frangossauro/startervim.git
     $ cd startervim
     $ ./install.sh
 
