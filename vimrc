@@ -179,4 +179,4 @@ source ~/.vimrc-keymaps
 "
 " Filetypes
 "
-autocmd BufRead *.json set filetype=json
+autocmd BufRead,BufNewFile *.json set filetype=json
