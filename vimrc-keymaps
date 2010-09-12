@@ -30,5 +30,3 @@ nmap <leader>e :LustyBufferExplorer<cr>
 nmap <leader><leader> :LustyJuggler<cr>
 
 " Omni autocomplete
-
-
