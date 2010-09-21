@@ -9,10 +9,11 @@ set nocompatible
 set lazyredraw
 set ttyfast
 set backspace=indent,eol,start 	" backspace works as expected
-set nostartofline 		        " Make j/k respect the columns (after all, this is not a freaking typewritter) 
-set modeline 			        " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the begining of the files)
+set nostartofline 		        " Make j/k respect the columns (after all, this is not a freaking typewriter) 
+set modeline 			        " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
 set hidden 			            " Avoid asking to save before hiding
 set enc=utf-8
+setlocal spell spelllang=en_us  " I assume you program in english
 
 filetype on
 filetype plugin on
@@ -30,14 +31,14 @@ set title
 set titlestring=%f%(\ [%M]%) 	" Show file name at the title
 set numberwidth=1
 set report=2
-set laststatus=0 		" Always show the last window line
+set laststatus=2 		
 set statusline=%f
 set showcmd
 set showmode
 
 
 "
-" Bend vim features and behaviours to our wishes. 
+" Bend vim features and behaviors to our wishes. 
 "
 
 "
@@ -51,6 +52,7 @@ set wildmode=list:longest
 set complete=.,w,b,u,U,t,i,d
 
 " Scrolling
+set scroll=5
 set scrolloff=5
 set sidescrolloff=5
 set sidescroll=1
@@ -67,7 +69,7 @@ set ignorecase
 set smartcase 		" Intelligent case-smart searching
 
 "
-" Identation
+" Indentation
 "
 set autoindent
 set smartindent
@@ -81,11 +83,18 @@ set softtabstop=4
 set shiftwidth=4
 
 "
-" AutoCompletion
+" Autocomplete
 "
 set infercase
 set completeopt=longest,menuone
 set ofu=syntaxcomplete#Complete
+
+"
+" Soft/Hard Wrapping
+"
+set wrap
+set textwidth=79
+set formatoptions=qrn1
 
 "
 " History and backup
@@ -102,6 +111,8 @@ set noswapfile
 set grepprg=ack
 set grepformat=%f:%l:%m
 
+" Format
+set formatprg=par
 
 " GUI Options
 if has("mouse")
@@ -119,6 +130,9 @@ if has("gui_running")
 	set go-=T to
 	set guioptions-=L
 	set guioptions-=r
+
+    " Highlight wrong spelling
+    highlight SpellBad term=underline gui=undercurl guisp=Orange
 endif
 
 
@@ -144,6 +158,10 @@ set statusline+=%*
 " Nerd Tree
 " --- BUNDLE: git://github.com/scrooloose/nerdtree.git
 
+"
+" Nerd Commenter
+" --- BUNDLE: http://github.com/scrooloose/nerdcommenter.git
+
 " Lusty explorer
 " --- BUNDLE: git://github.com/sjbach/lusty.git
 
@@ -160,16 +178,17 @@ let delimitMate_visual_leader = ""
 let g:SuperTabCrMapping = 0
 
 "
-" VimShell
-" --- BUNDLE: http://github.com/Shougo/vimshell.git
-
-"
 " Matchit
 " --- BUNDLE: http://github.com/edsono/vim-matchit.git
 
 "
 " vim-align 
 " --- BUNDLE: http://github.com/tsaleh/vim-align.git
+
+"
+" Vim-Fugitive
+" --- BUNDLE: http://github.com/tpope/vim-fugitive.git
+set statusline+=%{fugitive#statusline()}
 
 "
 " Your own key-maps. 
@@ -179,4 +198,18 @@ source ~/.vimrc-keymaps
 "
 " Filetypes
 "
-autocmd BufRead,BufNewFile *.json set filetype=json
+if has("autocmd")
+
+    " Save on focusLost
+    autocmd FocusLost * :wa
+
+    " Recognize 
+    autocmd BufRead,BufNewFile *.json set filetype=json
+    autocmd BufRead,BufNewFile *.less set filetype=less
+
+    autocmd FileType html       setlocal ts=2 sts=2 sw=2 expandtab 
+    autocmd FileType css        setlocal ts=2 sts=2 sw=2 expandtab 
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noexpandtab 
+    autocmd FileType json       setlocal ts=2 sts=2 sw=2 noexpandtab 
+
+endif

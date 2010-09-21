@@ -1,8 +1,18 @@
 let mapleader = ","
 
 "
-" Fixing some vim defaults
+" Fixing some vim defaults baddy
 "
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
 
 " Indent using tabs (while in visual mode) 
 vnoremap <tab>       >gv
@@ -10,12 +20,21 @@ vnoremap <s-tab>     <gv
 vnoremap <           <gv
 vnoremap >           >gv
 
-" Search only in the selected block (visual mode)
+" Search only in the selected block (visual mode) 
 vnoremap / <esc>/\%V
 
-" Scroll using C-j and C-k (instead of C-e and C-y)
-nnoremap <C-j> 5<C-e>
-nnoremap <C-k> 5<C-y>
+" Scroll using C-j and C-k 
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+
+" Easy buffer navigation with Mac option keys
+" opt-j, opt-h, opt-k, opt-l , respectively
+map ˙ <C-w>h            
+map ∆ <C-w>j
+map ˚ <C-w>k
+map ¬ <C-w>l
+map <leader>vw <C-w>v<C-w>l
+map <leader>hw <C-w>s<C-w>l
 
 " Toggle line-numbering
 nn <leader>n <esc>:set number! number?<cr>
