@@ -1,7 +1,7 @@
 let mapleader = ","
 
 "
-" Fixing some vim defaults baddy
+" Fixing some horrible vim defaults 
 "
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -23,18 +23,20 @@ vnoremap >           >gv
 " Search only in the selected block (visual mode) 
 vnoremap / <esc>/\%V
 
-" Scroll using C-j and C-k 
-nnoremap <C-j> <C-d>
-nnoremap <C-k> <C-u>
+" Buffer horizontal traversal using C-j and C-k 
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+" Tabs uses c-l and c-h
+map <C-h> <esc>:tabprevious<cr>
+map <C-l> <esc>:tabnext<cr>
 
 " Easy buffer navigation with Mac option keys
 " opt-j, opt-h, opt-k, opt-l , respectively
-map ˙ <C-w>h            
-map ∆ <C-w>j
-map ˚ <C-w>k
-map ¬ <C-w>l
 map <leader>vw <C-w>v<C-w>l
 map <leader>hw <C-w>s<C-w>l
+map <leader>++ 100<C-w>+<Cr>
+map <leader>== <C-w>=<Cr>
 
 " Toggle line-numbering
 nn <leader>n <esc>:set number! number?<cr>
@@ -43,9 +45,5 @@ nn <leader>n <esc>:set number! number?<cr>
 nmap <leader>o :NERDTreeToggle<cr>
 nmap <leader>O :NERDTreeFind<cr>
 
-" Lusty explorer
-nmap <leader>t :LustyFilesystemExplorer<cr>
-nmap <leader>e :LustyBufferExplorer<cr>
-nmap <leader><leader> :LustyJuggler<cr>
-
 " Omni autocomplete
+inoremap <Nul> <C-x><C-o>
