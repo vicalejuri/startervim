@@ -141,7 +141,7 @@ set formatprg=par
 if has("gui_running")
     colorscheme molokai
     set cursorline
-	set gfn:Monaco:h14
+	set gfn:Monaco:h13
 	set transp=2
 
 	" Don't show toolbar and scrollbars
