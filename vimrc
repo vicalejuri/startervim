@@ -112,8 +112,10 @@ set noswapfile
 "
 " Persistent-undo (vim 7.3)
 " 
-set undofile
-set undodir=/tmp
+if has("persistend_undo")
+    set undofile
+    set undodir=/tmp
+endif
 
 
 "
@@ -236,7 +238,6 @@ let python_highlight_all = 1
 " Your own key-maps and functions
 " 
 source ~/.vimrc-keymaps
-source ~/.vimrc-commontasks
 
 "
 " Filetypes

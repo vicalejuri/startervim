@@ -6,15 +6,25 @@ approach is used, including pathogen and automatic update of plugins (aka as bun
 
 The included bundles at the moment are:
 
-* [syntastic](http://github.com/scrooloose/syntastic)
-* [nerdtree](http://github.com/scrooloose/nerdtree)
-* [lusty](http://github.com/sjbach/lusty)
-* [delimitMate](http://github.com/Raimondi/delimitMate)
-* [snipMate](http://github.com/msanders/snipmate.vim)
-* [supertab](http://github.com/ervandew/supertab)
-* [vimshell](http://github.com/Shougo/vimshell)
-* [matchit](http://github.com/edsono/vim-matchit)
-* [align](http://github.com/tsaleh/vim-align)
+    * syntastic
+    * nerdtree
+    * nerdcommenter
+    * delimitMate
+    * fakeclip
+    * snipmate
+    * supertab
+    * matchit
+    * align
+    * tabular
+    * fugitive
+    * cucumber
+    * tslime
+    * ruby
+    * rails
+    * cute-python
+    * pydoc
+    * pyflakes-vim
+
 
 Installation
 ------------
