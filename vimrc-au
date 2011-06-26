@@ -1,0 +1,7 @@
+autocmd BufNewFile *.go s-^-package main\r\rimport "fmt"\r\rfunc main() {\r\r}-
+autocmd BufNewFile *.pm s-^-package XXX;\r\ruse strict;\ruse warnings;\r\r1;-
+autocmd BufNewFile *.pl s-^-#!/usr/bin/perl\r\ruse strict;\ruse warnings;\r\r-
+autocmd BufNewFile *.sh s-^-#!/bin/bash\r\r-
+autocmd BufNewFile *.py s-^-#!/usr/bin/python\r\r-
+autocmd BufNewFile *.rb s-^-#!/usr/bin/ruby\r\r-
+autocmd BufNewFile *.c  s-^-#include <stdio.h>\r\rint main(int argc, char** argv) {\r\treturn 0;\r}-
