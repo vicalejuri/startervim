@@ -14,6 +14,10 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Remembering the line offset of a mark should be the norm
+nnoremap ' `
+nnoremap ` '
+
 " Indent using tabs (while in visual mode) 
 vnoremap <tab>       >gv
 vnoremap <s-tab>     <gv
