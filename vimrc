@@ -240,6 +240,10 @@ let python_highlight_all = 1
 source ~/.vimrc-keymaps
 
 "
+" Your own autocmds
+source ~/.vimrc-au
+
+"
 " Filetypes
 "
 if has("autocmd")
