@@ -51,3 +51,8 @@ nmap <silent> <leader>O :NERDTreeFind<cr>
 
 " Omni autocomplete
 inoremap <Nul> <C-x><C-o>
+"
+" Easy copy-paste from system clipboard
+nnoremap <silent> ,p "+p
+nnoremap <silent> ,P "+P
+nnoremap <silent> ,y "+yy
