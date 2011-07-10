@@ -67,3 +67,6 @@ inoremap <silent> <C-S> <ESC>:w<CR>i
 nnoremap <silent> <C-S> <ESC>:w<CR>i
 vnoremap <silent> <C-S> <ESC>:w<CR>i
 
+" Ctrl+Backspace, Ctrl+Delete word deletion
+inoremap <silent> <C-Backspace> <ESC><right>dbi
+inoremap <silent> <C-Delete>    <ESC><right>dwi
