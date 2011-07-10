@@ -11,43 +11,43 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
+nnoremap <silent> j gj
+nnoremap <silent> k gk
 
 " Remembering the line offset of a mark should be the norm
 nnoremap ' `
 nnoremap ` '
 
 " Indent using tabs (while in visual mode) 
-vnoremap <tab>       >gv
-vnoremap <s-tab>     <gv
-vnoremap <           <gv
-vnoremap >           >gv
+vnoremap <silent> <tab>       >gv
+vnoremap <silent> <s-tab>     <gv
+vnoremap <silent> <           <gv
+vnoremap <silent> >           >gv
 
 " Search only in the selected block (visual mode) 
-vnoremap / <esc>/\%V
+vnoremap <silent> / <esc>/\%V
 
 " Buffer horizontal traversal using C-j and C-k 
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+nnoremap <silent> <C-j> <C-w>j
+nnoremap <silent> <C-k> <C-w>k
 
 " Tabs uses c-l and c-h
-map <C-h> <esc>:tabprevious<cr>
-map <C-l> <esc>:tabnext<cr>
+map <silent> <C-h> <esc>:tabprevious<cr>
+map <silent> <C-l> <esc>:tabnext<cr>
 
 " Easy buffer navigation with Mac option keys
 " opt-j, opt-h, opt-k, opt-l , respectively
-map <leader>vw <C-w>v<C-w>l
-map <leader>hw <C-w>s<C-w>l
-map <leader>++ 100<C-w>+<Cr>
-map <leader>== <C-w>=<Cr>
+map <silent> <leader>vw <C-w>v<C-w>l
+map <silent> <leader>hw <C-w>s<C-w>l
+map <silent> <leader>++ 100<C-w>+<Cr>
+map <silent> <leader>== <C-w>=<Cr>
 
 " Toggle line-numbering
 nn <leader>n <esc>:set number! number?<cr>
 
 " Nerd Tree
-nmap <leader>o :NERDTreeToggle<cr>
-nmap <leader>O :NERDTreeFind<cr>
+nmap <silent> <leader>o :NERDTreeToggle<cr>
+nmap <silent> <leader>O :NERDTreeFind<cr>
 
 " Omni autocomplete
 inoremap <Nul> <C-x><C-o>
