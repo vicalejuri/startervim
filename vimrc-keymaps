@@ -59,3 +59,11 @@ inoremap <Nul> <C-x><C-o>
 nnoremap <silent> ,p "+p
 nnoremap <silent> ,P "+P
 nnoremap <silent> ,y "+yy
+
+" Common combinations with Ctrl-key goes here
+
+" Save file by Ctrl+S
+inoremap <silent> <C-S> <ESC>:w<CR>i
+nnoremap <silent> <C-S> <ESC>:w<CR>i
+vnoremap <silent> <C-S> <ESC>:w<CR>i
+
