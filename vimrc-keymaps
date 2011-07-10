@@ -35,6 +35,9 @@ nnoremap <silent> <C-k> <C-w>k
 map <silent> <C-h> <esc>:tabprevious<cr>
 map <silent> <C-l> <esc>:tabnext<cr>
 
+" Open new tab pushing ,t
+nnoremap <silent> ,t <ESC>:tabnew<CR>
+
 " Easy buffer navigation with Mac option keys
 " opt-j, opt-h, opt-k, opt-l , respectively
 map <silent> <leader>vw <C-w>v<C-w>l
