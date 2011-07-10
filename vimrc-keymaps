@@ -60,6 +60,9 @@ nnoremap <silent> ,p "+p
 nnoremap <silent> ,P "+P
 nnoremap <silent> ,y "+yy
 
+" Smart home (go to real start of line)
+nnoremap <silent> <Home> g^
+
 " Common combinations with Ctrl-key goes here
 
 " Save file by Ctrl+S
