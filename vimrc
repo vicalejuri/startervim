@@ -42,8 +42,8 @@ set winminheight=0
 " Bend vim features and behaviors to our wishes. 
 "
 
-" for mistyping :w as :W
-command! W :w
+" Write with superuser permissions using :W command
+command W w !sudo tee % > /dev/null
 
 "
 " Command-mode completion
