@@ -1,0 +1,172 @@
+" Fix vim defaults 
+set nocompatible
+set lazyredraw
+set ttyfast
+set backspace=indent,eol,start 		" backspace works as expected
+set nostartofline 		            " Make j/k respect the columns (after all, this is not a freaking typewriter) 
+set modeline 			            " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
+set hidden 			                " Avoid asking to save before hiding
+set enc=utf-8
+"setlocal spell spelllang=en_us  	" I assume you code in english
+
+" Load Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+filetype plugin indent on
+
+" Basic UI 
+set visualbell
+set shm=atIWswxrnmlf
+set ruler
+set title
+set titlestring=%f%(\ [%M]%) 	" Show file name at the title
+set numberwidth=1
+set report=2
+set laststatus=2 		
+set statusline=%f
+set showcmd
+set showmode
+set winminheight=0
+
+"
+" Bend vim features and behaviors to our wishes. 
+"
+syntax on
+
+"
+" Command-mode completion
+"
+set wildmenu
+set wildignore=*.o,*.obj,*.pyc,*.swc,*.DS_STORE,*.bkp
+set wildmode=list:longest
+
+" Insert-mode completion
+set complete=.,w,b,u,U,t,i,d
+
+" Scrolling
+set scroll=5
+set scrolloff=5
+set sidescrolloff=5
+set sidescroll=1
+
+" Matching
+set showmatch
+set matchpairs=(:),{:},[:],<:>
+
+" Search and replace
+set gdefault 		" Make regexp matches everything, instead of just the first one 
+set incsearch 		" Search all instances
+set hlsearch 		" Highlight matched regexp 
+set ignorecase 		
+set smartcase 		" Intelligent case-smart searching
+
+"
+" Indentation
+"
+set autoindent
+set smartindent
+set smarttab
+set shiftround
+set nojoinspaces
+set nofoldenable
+
+if softab == "on"
+    set expandtab 
+endif
+let &tabstop=tabsize
+let &softtabstop=tabsize
+let &shiftwidth=tabsize
+
+"
+" Autocomplete
+"
+set infercase
+set completeopt=longest,menuone
+set ofu=syntaxcomplete#Complete
+
+"
+" Soft/Hard Wrapping
+"
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
+"
+" History and backup
+"
+set viminfo='10,:20,\"100,%,n~/.viminfo
+set history=1000
+set nobackup
+set nowritebackup
+set noswapfile
+
+"
+" Persistent-undo (vim 7.3)
+" 
+if has("persistend_undo")
+    set undofile
+    set undodir=.vim/undo
+endif
+
+
+"
+" Tabs
+"
+set guitablabel=%N/\ %t\ %M
+
+"
+" Grep
+"
+if executable("ack")
+	set grepprg=ack
+	set grepformat=%f:%l:%m
+endif
+
+" Format
+set formatprg=par
+
+" GUI Options
+if has("mouse")
+	set mouse=a
+	set mousefocus
+endif
+
+if has("gui_running")
+    set cursorline
+
+	" Don't show toolbar and scrollbars
+	set go-=T to
+	set guioptions-=L
+	set guioptions-=r
+
+    " Use system clipboard
+    set clipboard=unnamed
+endif
+
+ " When editing a file, always jump to the last known cursor position.
+ "  " Don't do it when the position is invalid or when inside an event handler
+ "   " (happens when dropping a file on gvim).
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+" Write with superuser permissions using :W command
+command W w !sudo tee % > /dev/null
+
+" Enable matchit and editExisting
+runtime! macros/machit.vim
+runtime! macros/editExisting.vim
+
+source ~/.vimrc-helpers
+
+"
+" Your own key-maps and functions
+" 
+source ~/.vimrc-keymaps
+
+"
+" Your own autocmds
+" 
+source ~/.vimrc-au
