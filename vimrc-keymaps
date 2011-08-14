@@ -3,14 +3,17 @@ let mapleader = ","
 "
 " Fixing some horrible vim defaults 
 "
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+if arrowkeys == "off"
+    nnoremap <up> <nop>
+    nnoremap <down> <nop>
+    nnoremap <left> <nop>
+    nnoremap <right> <nop>
+    inoremap <up> <nop>
+    inoremap <down> <nop>
+    inoremap <left> <nop>
+    inoremap <right> <nop>
+endif
+
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
@@ -38,12 +41,11 @@ map <silent> <C-l> <esc>:tabnext<cr>
 " Open new tab pushing ,t
 nnoremap <silent> ,t <ESC>:tabnew<CR>
 
-" Easy buffer navigation with Mac option keys
-" opt-j, opt-h, opt-k, opt-l , respectively
-map <silent> <leader>vw <C-w>v<C-w>l
-map <silent> <leader>hw <C-w>s<C-w>l
-map <silent> <leader>++ 100<C-w>+<Cr>
-map <silent> <leader>== <C-w>=<Cr>
+" Split helpers
+map <silent> <leader>vw <C-w>v<C-w>l    " Split vertically
+map <silent> <leader>hw <C-w>s<C-w>l    " Horizontally
+map <silent> <leader>++ 100<C-w>+<Cr>   " Increase buffer height
+map <silent> <leader>== <C-w>=<Cr>      " Recalculate buffers size
 
 " Toggle line-numbering
 nn <leader>n <esc>:set number! number?<cr>
@@ -63,33 +65,34 @@ nnoremap <silent> ,y "+yy
 " Smart home (go to real start of line)
 nnoremap <silent> <Home> g^
 
-" Common combinations with Ctrl-key goes here
+if !has("gui_running")
 
-" Save file by Ctrl+S
-inoremap <silent> <C-S> <ESC>:w<CR>i
-nnoremap <silent> <C-S> <ESC>:w<CR>i
-vnoremap <silent> <C-S> <ESC>:w<CR>i
+    " Save file by Ctrl+S
+    inoremap <silent> <C-S> <ESC>:w<CR>i
+    nnoremap <silent> <C-S> <ESC>:w<CR>i
+    vnoremap <silent> <C-S> <ESC>:w<CR>i
 
-" Ctrl+Backspace, Ctrl+Delete word deletion
-inoremap <silent> <C-Backspace> <ESC><right>dbi
-inoremap <silent> <C-Delete>    <ESC><right>dwi
+    " Ctrl+Backspace, Ctrl+Delete word deletion
+    inoremap <silent> <C-Backspace> <ESC><right>dbi
+    inoremap <silent> <C-Delete>    <ESC><right>dwi
 
-" Tab navigation with Ctrl + Tabnum
-ino <silent> <C-1> <ESC>:tabfirst<CR>
-nno <silent> <C-1> <ESC>:tabfirst<CR>
-ino <silent> <C-2> <ESC>2gt
-nno <silent> <C-2> <ESC>2gt
-ino <silent> <C-3> <ESC>3gt
-nno <silent> <C-3> <ESC>3gt
-ino <silent> <C-4> <ESC>4gt
-nno <silent> <C-4> <ESC>4gt
-ino <silent> <C-5> <ESC>5gt
-nno <silent> <C-5> <ESC>5gt
-ino <silent> <C-6> <ESC>6gt
-nno <silent> <C-6> <ESC>6gt
-ino <silent> <C-7> <ESC>7gt
-nno <silent> <C-7> <ESC>7gt
-ino <silent> <C-8> <ESC>8gt
-nno <silent> <C-8> <ESC>8gt
-ino <silent> <C-9> <ESC>:tablast<CR>
-nno <silent> <C-9> <ESC>:tablast<CR>
+    " Tab navigation with Ctrl + Tabnum
+    ino <silent> <C-1> <ESC>:tabfirst<CR>
+    nno <silent> <C-1> <ESC>:tabfirst<CR>
+    ino <silent> <C-2> <ESC>2gt
+    nno <silent> <C-2> <ESC>2gt
+    ino <silent> <C-3> <ESC>3gt
+    nno <silent> <C-3> <ESC>3gt
+    ino <silent> <C-4> <ESC>4gt
+    nno <silent> <C-4> <ESC>4gt
+    ino <silent> <C-5> <ESC>5gt
+    nno <silent> <C-5> <ESC>5gt
+    ino <silent> <C-6> <ESC>6gt
+    nno <silent> <C-6> <ESC>6gt
+    ino <silent> <C-7> <ESC>7gt
+    nno <silent> <C-7> <ESC>7gt
+    ino <silent> <C-8> <ESC>8gt
+    nno <silent> <C-8> <ESC>8gt
+    ino <silent> <C-9> <ESC>:tablast<CR>
+    nno <silent> <C-9> <ESC>:tablast<CR>
+endif
