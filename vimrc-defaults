@@ -134,6 +134,7 @@ endif
 
 if has("gui_running")
     set cursorline
+    let &guifont=gui_font
 
 	" Don't show toolbar and scrollbars
 	set go-=T to

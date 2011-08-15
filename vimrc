@@ -6,10 +6,11 @@ let softab    = "on"
 let tabsize   = 4
 let mapleader = ","
 let arrowkeys = "off"
+let gui_font  = "Monaco:h12"
 
 source ~/.vimrc-defaults
 
-colorscheme "monokai"
+colorscheme molokai
 
 " Default bundles
 Bundle 'scrooloose/nerdtree'

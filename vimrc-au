@@ -6,5 +6,5 @@ autocmd BufNewFile *.py s-^-#!/usr/bin/env python\r\r-
 autocmd BufNewFile *.rb s-^-#!/usr/bin/env ruby\r\r-
 autocmd BufNewFile *.c  s-^-#include <stdio.h>\r\rint main(int argc, char** argv) {\r\treturn 0;\r}-
 
-autocmd BufWritePre *.py,*.rb,*.sh,*.js :call <SID>StripTrailingWhitespaces()
-autocmd BufWritePre *.py,*.rb,*.sh,*.js :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.py,*.rb,*.sh,*.pl,*.pm,*.js :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.c,*.h,*.go,*.html,*.css :call <SID>StripTrailingWhitespaces()
