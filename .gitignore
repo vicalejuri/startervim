@@ -1,4 +1,5 @@
 vim/bundle/*
 vim/doc/bundles.txt
+vim/autoload
 vim/.netrwhist
 vim/spell
