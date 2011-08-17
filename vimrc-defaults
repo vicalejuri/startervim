@@ -104,7 +104,7 @@ set noswapfile
 "
 " Persistent-undo (vim 7.3)
 " 
-if has("persistend_undo")
+if has("persistent_undo")
     set undofile
     set undodir=.vim/undo
 endif
