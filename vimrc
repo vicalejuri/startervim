@@ -14,12 +14,12 @@ colorscheme molokai
 
 " Default bundles
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrolloose/nerdcomments'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'msanders/snipmate.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'ervandew/supertab'
 
-Bundle 'raimondi/delimitMate'
+Bundle 'Raimondi/delimitMate.git'
 let delimitMate_visual_leader = ","
 
 Bundle 'tpope/vim-fugitive'
