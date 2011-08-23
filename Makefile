@@ -14,14 +14,14 @@ backup:
 
 
 install: 
-	@ln -s $(PWD)/vim $(TARGET)/.vim
-	@ln -s $(PWD)/vimrc $(TARGET)/.vimrc
-	@ln -s $(PWD)/vimrc-keymaps $(TARGET)/.vimrc-keymaps
-	@ln -s $(PWD)/vimrc-au $(TARGET)/.vimrc-au
-	@ln -s $(PWD)/vimrc-defaults $(TARGET)/.vimrc-defaults
-	@ln -s $(PWD)/vimrc-helpers $(TARGET)/.vimrc-helpers
-	@echo "Installation complete"
-
+	@cp -R $(PWD)/vim $(TARGET)/.vim
+	@cp $(PWD)/vimrc $(TARGET)/.vimrc
+	@cp $(PWD)/vimrc-keymaps $(TARGET)/.vimrc-keymaps
+	@cp $(PWD)/vimrc-au $(TARGET)/.vimrc-au
+	@cp $(PWD)/vimrc-defaults $(TARGET)/.vimrc-defaults
+	@cp $(PWD)/vimrc-helpers $(TARGET)/.vimrc-helpers
+	vim -s .post-install.vim
+	echo "Installation complete" 					
 
 uninstall: 
 	@echo "Uninstalling"
@@ -41,4 +41,4 @@ restore_backup: uninstall
 
 all: backup install
 
-.PHONY: install backup uninstall restore_backup
+.PHONY: install backup uninstall restore_backup 

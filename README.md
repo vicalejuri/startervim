@@ -1,85 +1,66 @@
 Startervim
 ==========
 
-Startervim is a collection of vim scripts, plugins and configurations to make vim suck less. A modern vim
-approach is used, including pathogen and automatic update of plugins (aka as bundles).
+Startervim is a collection of vim scripts, plugins and configurations that provides vim with sensible defaults and 
+a sane plugin management system using pathogen.
 
 The included bundles at the moment are:
 
-    * syntastic
+    * Vundle
     * nerdtree
     * nerdcommenter
-    * delimitMate
-    * fakeclip
     * snipmate
-    * supertab
-    * matchit
-    * align
     * tabular
-    * fugitive
-    * cucumber
-    * tslime
-    * ruby
-    * rails
-    * cute-python
-    * pydoc
-    * pyflakes-vim
-
+    * syntastic
+    * delimitMate
+    * vim-fugitive 
+    * syntastic 
 
 Installation
 ------------
 
-You need an standalone ruby interpreter. Automatic download/update of bundles is handled by a ruby script.
-It's fine to have a vim without ruby support.
-
-Installation is performed by user, and not system-wide. Your old `.vim/` and `.vimrc` files are saved
-as `~/.$file-name.%date%.bak` . To install, simple issue this commands:
+First you need to clone `startervim` and it's core dependencies:
 
     $ git clone git://github.com/Frangossauro/startervim.git
-    $ cd startervim
-    $ ./install.sh
+    $ git submodule update --init
 
-And you're done! You may wanna edit your `~/.vimrc` or `~/.vimrc-keymaps` , but i've already provided it
-with sensible defaults ;)
+Ok, we recommended you to make a backup ; that will be stored at `~/.vim-backup` and install:
+
+    $ make backup
+    $ make install
+
+And you're done! You now may wanna edit your `~/.vimrc`, `~/.vimrc-keymaps` and add your own bundles
+and tweaks to it.
 
 Managing plugins/bundles
 ------------------------
    
-This is a modern vim, you know? This means that that horrible mess sitting in your `.vim/` folder is not
-there anymore. Each plugin (i like to call it `bundles`) resides in it own container, inside `bundle/bundle-name`.
-Nice isn't? 
+Startervim uses [Vundle](https://github.com/gmarik/vundle) to manage it's bundles. You can safely install/
+remove bundles without using any external helper and you can maintain your scripts always updated. 
 
-A helper is included to manage bundles and stay them always updated. This is provided by the useful ruby
-script [vim-update-bundles](http://github.com/bronson/vim-update-bundles), which works with git
-repositories. A [mirror](http://github.com/vim-scripts) is provided to all plugins in `www.vim.org`, 
-so you can use all plugins from `www.vim.org` without further problems. 
+You have to be aware that `Vundle` doesn't fetch plugins listed on the www.vim-scripts.org page. If you
+need to install a plugin from vim-scripts page, you can use [this github mirror](http://github.com/vim-scripts).
 
 ### How do i install new bundles?
 
-First, you need to make sure that the bundle you want is in a git repository. 
-Try to find your plugin/bundle [here](http://github.com/vim-scripts).
+Open your `vimrc` and add the following line
 
-Now, open your `vimrc` and add the following line
+    #       repo on github or vim-scripts mirror
+    Bundle 'tpope/vim-fugitive'
 
-    # --- BUNDLE http://path-to-the-git-repository
-
-And now run `:UpdateBundles` inside vim.
+And now run `:BundleInstall` inside vim.
 
 ### How do i remove a bundle ?
 
-Open your `vimrc` and remove the specific bundle line. Run `:UpdateBundles` again, and you're 
-done :)
+Open your `vimrc` and remove the specific bundle line. Run `:BundleClean`, and you're  done :)
 
 ### What about updating my bundles ?
 
-Just run `:UpdateBundles` inside vim.
-
-### How do i know what bundles/versions are installed?
-
-    :help bundles
+Just run `:UpdateBundles!` inside vim.
 
 Kudos
 -----
 
-* [tpope](http://github.com/tpope/vim-pathogen) for cleaning the mess with vim plugins (pathogen)
-* [bronsom](http://github.com/bronson/) to his incredible work on `vim-update-bundles` and `vim-scripts` mirror.
+* [tpope](http://github.com/tpope/vim-pathogen) for cleaning the mess with vim plugins (pathogen).
+* [gmarik](https://github.com/gmarik/vundle) for providing a native plugin manager for vim.
+* [bronsom](http://github.com/bronson/) to his incredible work on `vim-scripts` mirror.
