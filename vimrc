@@ -33,5 +33,3 @@ Bundle 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-Bundle 'othree/html5.vim'
