@@ -159,15 +159,3 @@ command W w !sudo tee % > /dev/null
 " Enable matchit and editExisting
 runtime! macros/machit.vim
 runtime! macros/editExisting.vim
-
-source ~/.vimrc-helpers
-
-"
-" Your own key-maps and functions
-" 
-source ~/.vimrc-keymaps
-
-"
-" Your own autocmds
-" 
-source ~/.vimrc-au
