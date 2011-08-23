@@ -21,7 +21,7 @@ install:
 	@cp $(PWD)/vimrc-defaults $(TARGET)/.vimrc-defaults
 	@cp $(PWD)/vimrc-helpers $(TARGET)/.vimrc-helpers
 	vim -s .post-install.vim
-	echo "Installation complete" 					
+	@echo "Installation complete" 					
 
 uninstall: 
 	@echo "Uninstalling"
