@@ -9,7 +9,7 @@ let mapleader = ","
 
 source ~/.vimrc-defaults
 
-" Feel free to the files below (helpers functions, autocommands and key shortcuts)
+" Feel free to edit the files below (helpers functions, autocommands and key shortcuts)
 source ~/.vimrc-helpers
 source ~/.vimrc-au
 source ~/.vimrc-keymaps
