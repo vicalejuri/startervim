@@ -1,6 +1,14 @@
 Startervim
 ==========
 
+### Rusted & Abandoned project
+
+This project is long abandoned, and i don't even use this on vim anymore. I use [spf13-vim](https://github.com/spf13/spf13-vim) and [Atom](https://atom.io/) nowadays...
+
+![occupy-mah-code](http://i.imgur.com/ODoT6Bb.jpg "occupy-mah-code")
+
+## Bla bla bla
+
 Startervim is a collection of vim scripts, plugins and configurations that provides vim with sensible defaults and 
 a sane plugin management system using pathogen.
 
