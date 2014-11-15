@@ -22,7 +22,6 @@ The included bundles at the moment are:
     * syntastic
     * delimitMate
     * vim-fugitive 
-    * syntastic 
 
 Installation
 ------------
